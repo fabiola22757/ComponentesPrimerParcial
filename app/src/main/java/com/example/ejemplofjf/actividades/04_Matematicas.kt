@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AcUnit
@@ -29,10 +30,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.Role.Companion.Image
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.example.ejemplofjf.R
 import kotlin.math.min
 
-//@Preview(showBackground = true)
+@Preview(showBackground = true)
 @Composable
 
 fun MateView(){
@@ -99,8 +101,7 @@ fun MateView(){
             //Image con evento Modifier.clickable{} para DIVISIÓN
             Image(painter = painterResource(id = R.drawable.division),
                 contentDescription = "Dividir",
-                contentScale = ContentScale.Fit,
-                modifier = Modifier.clickable {
+                modifier = Modifier.size(50.dp).clickable {
                     resultado = (firstNumber.toInt() / secondNumber.toInt()).toString()
                 }
                 )
@@ -112,7 +113,7 @@ fun MateView(){
     }
 }
 
-@Preview(showBackground = true)
+//@Preview(showBackground = true)
 @Composable
 
 fun Mayor_Menor_View(){
