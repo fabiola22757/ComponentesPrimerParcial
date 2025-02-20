@@ -5,7 +5,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -23,7 +22,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.input.KeyboardType.Companion.Text
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -35,26 +33,26 @@ import com.example.ejemplofjf.R
 
 fun Contabilidad(){
     //Constantes
-    val eneroI: Int = 2000
-    val eneroE: Int = 500
+    val eneroI = 2000
+    val eneroE = 500
 
-    val abrilI: Int = 4000
-    val abrilE: Int = 4500
+    val abrilI = 4000
+    val abrilE = 4500
 
-    val mayoE: Int = 1200
+    val mayoE = 1200
 
-    val junioE: Int = 3000
+    val junioE = 3000
 
-    val julioI: Int = 8000
-    val julioE: Int = 4500
+    val julioI = 8000
+    val julioE = 4500
 
-    val septE: Int = 4650
+    val septE = 4650
 
-    val octI: Int = 12000
-    val octE: Int = 6000
+    val octI = 12000
+    val octE = 6000
 
-    val dicI: Int = 25000
-    val dicE: Int = 75000
+    val dicI = 25000
+    val dicE = 75000
 
     //Variables
     var eneroR by remember {
