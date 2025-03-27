@@ -60,5 +60,8 @@ dependencies {
     //para importar los íconos del sistema en la app
     implementation(libs.androidx.material.icons.core.android)
     implementation(libs.androidx.material.icons.extended.android)
-    //luego le damos en Sync now (sincronizar ahora)
+    implementation("androidx.navigation:navigation-compose:2.5.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+    implementation("androidx.datastore:datastore-preferences-android:1.1.2")
+    //luego le damos en Sync now (sincronizar ahora) en la parte de arriba
 }

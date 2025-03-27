@@ -4,13 +4,27 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import com.example.ejemplofjf.Preferencias.InfoView
+import com.example.ejemplofjf.actividades.AgeNavegation
+import com.example.ejemplofjf.actividades.SorteoView
 import com.example.ejemplofjf.componentes.CajaDeTextoView
+import com.example.ejemplofjf.lazylist.models.ProductModel
+import com.example.ejemplofjf.lazylist.viewmodels.ProductViewModel
+import com.example.ejemplofjf.lazylist.viewmodels.StudentViewModel
+import com.example.ejemplofjf.lazylist.views.ListProductsView
+import com.example.ejemplofjf.lazylist.views.ProductView
+import com.example.ejemplofjf.lazylist2.ListCategoriasView
+import com.example.ejemplofjf.lazylist2.SetupNavigation
+import com.example.ejemplofjf.navigation.NavigationManager
 import com.example.ejemplofjf.ui.theme.EjemplofjfTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,14 +33,25 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             EjemplofjfTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Scaffold(modifier = Modifier.fillMaxSize()) {
+                        innerPadding ->
                     /*
+                    innerPadding ->
                     Greeting(
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
                     )
                      */
-                    CajaDeTextoView()
+                    Column (modifier = Modifier.padding(innerPadding)){
+                        //InfoView()
+                        //AgeNavegation()
+                        //val studentViewModel = StudentViewModel()
+                        //SorteoView(studentViewModel)
+                        //ListProductsView()
+                        //ListCategoriasView()
+                        val navController = rememberNavController()
+                        SetupNavigation(navController)
+                    }
                 }
             }
         }

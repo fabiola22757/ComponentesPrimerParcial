@@ -26,12 +26,13 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.ejemplofjf.R
 
 @Preview(showBackground = true)
 @Composable
 
-fun BotonesView(){
+fun BotonesView(navegar: NavController){
 
     //Declaración de variables para el botón
     //Modo imperativo:
@@ -74,12 +75,13 @@ fun BotonesView(){
                 //if(cambio) es igual a TRUE
                 //if(!cambio) es igual a FALSE
                 //Función del botón
-                if(!cambio) { //SÍ es false
+                /*if(!cambio) { //SÍ es false
                     texto = "Ningún Afternoon ni ningún Hello"
                 }else { //SÍ es true
                     texto = "Hellooooo"
                 }
-                cambio = !cambio
+                cambio = !cambio*/
+                navegar.popBackStack()
             }, modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color.Magenta,
