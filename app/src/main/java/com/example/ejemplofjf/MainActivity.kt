@@ -12,9 +12,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.ejemplofjf.Preferencias.InfoView
 import com.example.ejemplofjf.actividades.AgeNavegation
+import com.example.ejemplofjf.actividades.CardView
+import com.example.ejemplofjf.actividades.InputView
 import com.example.ejemplofjf.actividades.SorteoView
 import com.example.ejemplofjf.componentes.CajaDeTextoView
 import com.example.ejemplofjf.lazylist.models.ProductModel
@@ -22,8 +25,6 @@ import com.example.ejemplofjf.lazylist.viewmodels.ProductViewModel
 import com.example.ejemplofjf.lazylist.viewmodels.StudentViewModel
 import com.example.ejemplofjf.lazylist.views.ListProductsView
 import com.example.ejemplofjf.lazylist.views.ProductView
-import com.example.ejemplofjf.lazylist2.ListCategoriasView
-import com.example.ejemplofjf.lazylist2.SetupNavigation
 import com.example.ejemplofjf.navigation.NavigationManager
 import com.example.ejemplofjf.ui.theme.EjemplofjfTheme
 
@@ -49,8 +50,9 @@ class MainActivity : ComponentActivity() {
                         //SorteoView(studentViewModel)
                         //ListProductsView()
                         //ListCategoriasView()
-                        val navController = rememberNavController()
-                        SetupNavigation(navController)
+                        AgeNavegation()
+                        //val navController = rememberNavController()
+                        //SetupNavigation(navController)
                     }
                 }
             }
