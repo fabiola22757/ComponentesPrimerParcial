@@ -12,7 +12,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
 import com.example.ejemplofjf.actividades.AgeNavegation
+import com.example.ejemplofjf.actividades.NavMan
 import com.example.ejemplofjf.ui.theme.EjemplofjfTheme
 
 class MainActivity : ComponentActivity() {
@@ -37,9 +39,10 @@ class MainActivity : ComponentActivity() {
                         //SorteoView(studentViewModel)
                         //ListProductsView()
                         //ListCategoriasView()
-                        AgeNavegation()
-                        //val navController = rememberNavController()
+                        //AgeNavegation()
+                        val navController = rememberNavController()
                         //SetupNavigation(navController)
+                        NavMan(navController)
                     }
                 }
             }
